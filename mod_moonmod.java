@@ -27,7 +27,7 @@ import net.minecraftforge.common.DimensionManager;
 /*
  * Basic needed forge stuff
  */
-@Mod(modid="Moonmod",name="Moonmod by Jlndk",version="0.0.3 for 1.4.5")
+@Mod(modid="Moonmod",name="Moonmod by Jlndk",version="0.0.3 for 1.4.6")
 @NetworkMod(clientSideRequired=true,serverSideRequired=false)
 public class mod_moonmod {
 	public static int screwUses = 30;
@@ -118,18 +118,18 @@ public class mod_moonmod {
 			LanguageRegistry.instance().addStringLocalization("tile.CheeseBlock.name", "da_DK", "Oste Blok");
 			LanguageRegistry.instance().addStringLocalization("tile.AluBlock.name", "da_DK", "Alumenium Blok");
 			LanguageRegistry.instance().addStringLocalization("tile.AluOre.name", "da_DK", "Alumenium Malm");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonStone.name", "da_DK", "M��ne Sten");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonCobblestone.name", "da_DK", "M��ne Brosten");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonPortal.name", "da_DK", "M��ne Portal Block");
-			LanguageRegistry.instance().addStringLocalization("tile.ReinfCloth.name", "da_DK", "Forst��rket Stof");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonTent.name", "da_DK", "M��ne Telt");
+			LanguageRegistry.instance().addStringLocalization("tile.MoonStone.name", "da_DK", "M������ne Sten");
+			LanguageRegistry.instance().addStringLocalization("tile.MoonCobblestone.name", "da_DK", "M������ne Brosten");
+			LanguageRegistry.instance().addStringLocalization("tile.MoonPortal.name", "da_DK", "M������ne Portal Block");
+			LanguageRegistry.instance().addStringLocalization("tile.ReinfCloth.name", "da_DK", "Forst������rket Stof");
+			LanguageRegistry.instance().addStringLocalization("tile.MoonTent.name", "da_DK", "M������ne Telt");
 			//Items
-			LanguageRegistry.instance().addStringLocalization(SonicScrew.getItemName() + ".name", "da_DK", "Sonisk Skruetr��kker");
+			LanguageRegistry.instance().addStringLocalization(SonicScrew.getItemName() + ".name", "da_DK", "Sonisk Skruetr������kker");
 			LanguageRegistry.instance().addStringLocalization(AluIngot.getItemName() + ".name", "da_DK", "Alumenium Barre");
-			LanguageRegistry.instance().addStringLocalization(MoonHelmet.getItemName() + ".name", "da_DK", "M��ne Hjelm");
-			LanguageRegistry.instance().addStringLocalization(MoonChest.getItemName() + ".name", "da_DK", "M��ne Jakke");
-			LanguageRegistry.instance().addStringLocalization(MoonPants.getItemName() + ".name", "da_DK", "M��ne Bukser");
-			LanguageRegistry.instance().addStringLocalization(MoonBoots.getItemName() + ".name", "da_DK", "M��ne St��vler");
+			LanguageRegistry.instance().addStringLocalization(MoonHelmet.getItemName() + ".name", "da_DK", "M������ne Hjelm");
+			LanguageRegistry.instance().addStringLocalization(MoonChest.getItemName() + ".name", "da_DK", "M������ne Jakke");
+			LanguageRegistry.instance().addStringLocalization(MoonPants.getItemName() + ".name", "da_DK", "M������ne Bukser");
+			LanguageRegistry.instance().addStringLocalization(MoonBoots.getItemName() + ".name", "da_DK", "M������ne St������vler");
 			LanguageRegistry.instance().addStringLocalization(CheeseSlice.getItemName() + ".name", "da_DK", "Oste Stykke");
 	//Recipes
 		//crafting
