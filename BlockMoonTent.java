@@ -182,8 +182,8 @@ public static boolean inTent(World wd, int x, int y, int z) {
 	int sides = 0;
 	boolean ceil = false;
 	for (int i = -5; i < 128; i++) {
-		if (wd.getBlockId(x, y + i, z) == mod_moonmod.reinfID
-				|| wd.getBlockId(x, y + i, z) == mod_moonmod.aluingotID) {
+		if (wd.getBlockId(x, y + i, z) == mod_moonmod.ReinfClothID
+				|| wd.getBlockId(x, y + i, z) == mod_moonmod.AluIngotID) {
 			ceil = true;
 			break;
 		}
@@ -192,32 +192,32 @@ public static boolean inTent(World wd, int x, int y, int z) {
 		return false;
 
 	for (int i = -32; i <= 0; i++) {
-		if (wd.getBlockId(x + i, y, z) == mod_moonmod.reinfID
-				|| wd.getBlockId(x + i, y, z) == mod_moonmod.aluingotID) {
+		if (wd.getBlockId(x + i, y, z) == mod_moonmod.ReinfClothID
+				|| wd.getBlockId(x + i, y, z) == mod_moonmod.AluIngotID) {
 			sides++;
 			break;
 		}
 	}
 
 	for (int i = -32; i <= 0; i++) {
-		if (wd.getBlockId(x - i, y, z) == mod_moonmod.reinfID
-				|| wd.getBlockId(x - i, y, z) == mod_moonmod.aluingotID) {
+		if (wd.getBlockId(x - i, y, z) == mod_moonmod.ReinfClothID
+				|| wd.getBlockId(x - i, y, z) == mod_moonmod.AluIngotID) {
 			sides++;
 			break;
 		}
 	}
 
 	for (int i = -32; i <= 0; i++) {
-		if (wd.getBlockId(x, y, z + i) == mod_moonmod.reinfID
-				|| wd.getBlockId(x, y, z + i) == mod_moonmod.aluingotID) {
+		if (wd.getBlockId(x, y, z + i) == mod_moonmod.ReinfClothID
+				|| wd.getBlockId(x, y, z + i) == mod_moonmod.AluIngotID) {
 			sides++;
 			break;
 		}
 	}
 
 	for (int i = -32; i <= 0; i++) {
-		if (wd.getBlockId(x, y, z - i) == mod_moonmod.reinfID
-				|| wd.getBlockId(x, y, z - i) == mod_moonmod.aluingotID) {
+		if (wd.getBlockId(x, y, z - i) == mod_moonmod.ReinfClothID
+				|| wd.getBlockId(x, y, z - i) == mod_moonmod.AluIngotID) {
 			sides++;
 			break;
 		}

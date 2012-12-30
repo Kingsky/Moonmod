@@ -15,14 +15,16 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.event.world.WorldEvent;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.DimensionManager;
-
+import net.minecraftforge.common.Configuration;
  
 /*
  * Basic needed forge stuff
@@ -31,33 +33,59 @@ import net.minecraftforge.common.DimensionManager;
 @NetworkMod(clientSideRequired=true,serverSideRequired=false)
 public class mod_moonmod {
 	public static int screwUses = 30;
-	public static int reinfID = 461;
-	public static int aluingotID = 550;
+	
 	{
 		MinecraftForgeClient.preloadTexture("/jlndk/moonmod/Blocks.png");
 	}
-
-		//Block Declaring
-	public static Block CheeseBlock = new BlockCheese(425, 1).setBlockName("CheeseBlock").setHardness(1F).setResistance(5F);;
-	public static Block AluBlock = new BlockAluBlock(456, 2).setBlockName("AluBlock").setHardness(1F).setResistance(5F);
-	public static Block AluOre = new BlockAluBlock(457, 3).setBlockName("AluOre").setHardness(1F).setResistance(5F);
-	public static final Block MoonPortal = new BlockMoonPortal(458, 14).setStepSound(Block.soundGlassFootstep).setHardness(0.5F).setResistance(1F).setBlockName("MoonPortal");
-    public static final Block MoonStone = new BlockMoonStone(146, 6).setBlockName("MoonStone").setHardness(1F).setResistance(5F);
-    public static final Block MoonCobblestone = new BlockMoonCobblestone(147, 6).setBlockName("MoonCobblestone").setHardness(1F).setResistance(5F);
-    public static final Block IgniteBlock = new BlockIgniteBlock(460, 0).setBlockName("IgniteBlock").setHardness(1F).setResistance(5F);
-    public static Block ReinfCloth = new BlockReinforgedCloth(reinfID, 4).setBlockName("ReinfCloth").setHardness(1F).setResistance(2F);
-    public static Block MoonTent = new BlockMoonTent(462, 7).setBlockName("MoonTent").setHardness(1F).setResistance(10F);
+	
+	//Config File Stuff
+	public static boolean someConfigFlag;
+		
+	// Place Holder's for config file
+		
+		//Blocks
+			public static int CheeseBlockID;
+			public static int AluBlockID;
+			public static int AluOreID;
+			public static int MoonPortalID;
+			public static int MoonStoneID;
+			public static int MoonCobblestoneID;
+			public static int IgniteBlockID;
+			public static int ReinfClothID;
+			public static int MoonTentID;
+		
+		//Items
+			public static int AluIngotID;
+			public static int SonicScrewID;
+			public static int CheeseSliceID;
+	
+		//Armor
+			public static int MoonHelmetID;
+			public static int MoonChestID;
+			public static int MoonPantsID;
+			public static int MoonBootsID;
+	
+	//Block Declaring
+	public static Block CheeseBlock = new BlockCheese(CheeseBlockID, 1).setBlockName("CheeseBlock").setHardness(1F).setResistance(5F);;
+	public static Block AluBlock = new BlockAluBlock(AluBlockID, 2).setBlockName("AluBlock").setHardness(1F).setResistance(5F);
+	public static Block AluOre = new BlockAluBlock(AluOreID, 3).setBlockName("AluOre").setHardness(1F).setResistance(5F);
+	public static final Block MoonPortal = new BlockMoonPortal(MoonPortalID, 14).setStepSound(Block.soundGlassFootstep).setHardness(0.5F).setResistance(1F).setBlockName("MoonPortal");
+    public static final Block MoonStone = new BlockMoonStone(MoonStoneID, 6).setBlockName("MoonStone").setHardness(1F).setResistance(5F);
+    public static final Block MoonCobblestone = new BlockMoonCobblestone(MoonCobblestoneID, 6).setBlockName("MoonCobblestone").setHardness(1F).setResistance(5F);
+    public static final Block IgniteBlock = new BlockIgniteBlock(IgniteBlockID, 0).setBlockName("IgniteBlock").setHardness(1F).setResistance(5F);
+    public static Block ReinfCloth = new BlockReinforgedCloth(ReinfClothID, 4).setBlockName("ReinfCloth").setHardness(1F).setResistance(2F);
+    public static Block MoonTent = new BlockMoonTent(MoonTentID, 7).setBlockName("MoonTent").setHardness(1F).setResistance(10F);
     
 	//Item Declaring
-	public static Item AluIngot = new ItemAluIngot(aluingotID).setIconIndex(1).setItemName("AluIngot");
-	public static Item SonicScrew = new ItemSonicScrew(551).setIconIndex(2).setItemName("SonicScrew");
-	public static Item CheeseSlice = new ItemCheeseSlice (552, 8, true).setIconIndex(3).setItemName("CheeseSlice");
+	public static Item AluIngot = new ItemAluIngot(AluIngotID).setIconIndex(1).setItemName("AluIngot");
+	public static Item SonicScrew = new ItemSonicScrew(SonicScrewID).setIconIndex(2).setItemName("SonicScrew");
+	public static Item CheeseSlice = new ItemCheeseSlice (CheeseSliceID, 8, true).setIconIndex(3).setItemName("CheeseSlice");
 	
 	//Armor Declaring
-	public static Item MoonHelmet = (new ItemMoonArmor(700, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 0).setIconIndex(4).setItemName("moonHelm"));
-	public static Item MoonChest = (new ItemMoonArmor(701, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 1).setIconIndex(5).setItemName("moonChest"));
-	public static Item MoonPants = (new ItemMoonArmor(702, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 2).setIconIndex(6).setItemName("moonPants"));
-	public static Item MoonBoots = (new ItemMoonArmor(703, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 3).setIconIndex(7).setItemName("moonBoots"));
+	public static Item MoonHelmet = (new ItemMoonArmor(MoonHelmetID, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 0).setIconIndex(4).setItemName("moonHelm"));
+	public static Item MoonChest = (new ItemMoonArmor(MoonChestID, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 1).setIconIndex(5).setItemName("moonChest"));
+	public static Item MoonPants = (new ItemMoonArmor(MoonPantsID, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 2).setIconIndex(6).setItemName("moonPants"));
+	public static Item MoonBoots = (new ItemMoonArmor(MoonBootsID, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 3).setIconIndex(7).setItemName("moonBoots"));
 	
 	@SidedProxy(clientSide = "net.jlndk.moonmod.ClientProxyTutorial", serverSide = "net.jlndk.moonmod.CommonProxyTutorial")
     public static CommonProxyTutorial proxy;
@@ -69,7 +97,38 @@ public class mod_moonmod {
 	
 	//tent
 	
+	@PreInit
+    public void preInit(FMLPreInitializationEvent event) {
+           //Config File stuff
+			Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 
+            config.load();
+         //Config file id
+            
+            //Blocks
+            	CheeseBlockID = config.getBlock("CheeseBlockID", 455).getInt();
+            	AluBlockID = config.getBlock("AluBlockID", 456).getInt();
+            	AluOreID = config.getBlock("AluOreID", 148).getInt();
+            	MoonPortalID = config.getBlock("MoonPortalBlockID", 457).getInt();
+            	MoonStoneID = config.getBlock("MoonStone", 146).getInt();
+            	MoonCobblestoneID = config.getBlock("MoonCobblestoneID", 147).getInt();
+            	IgniteBlockID = config.getBlock("IngniteBlockID", 458).getInt();
+            	ReinfClothID = config.getBlock("ReinfClothID", 459).getInt();
+            	MoonTentID = config.getBlock("MoonTentID", 460).getInt();
+
+            //Items
+            	int AluIngotID = config.getItem("AluIngotID", 550).getInt();
+            	int SonicScrewID = config.getItem("SonicScrewID", 551).getInt();
+            	int CheeseSliceID = config.getItem("CheeseSliceID", 552).getInt();
+            
+            //Armor
+            	int MoonHelmetID = config.getItem("MoonHelmetID", 700).getInt();
+            	int MoonChestID = config.getItem("MoonChestID", 701).getInt();
+            	int MoonPantsID = config.getItem("MoonPantsID", 702).getInt();
+            	int MoonBootsID = config.getItem("MoonBootsID", 703).getInt();
+            	
+            config.save();
+    }
 	
 	//Declaring Init
 	@Init
