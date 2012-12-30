@@ -15,6 +15,8 @@ On Moon there are few changes against Minecraftia. As you know, Moon doesn’t h
 
 The Moon has a lower gravity than Minecraftia. So you can jump higher and fall deeper at ease. But this could be a little contra productive. So if you want to jump a little use duck jump i.e.  jump while sneaking.
 
+TERMS OF AGREEMENT
+==================
 0. USED TERMS
 MOD - modification, plugin, a piece of software that interfaces with the Minecraft client to extend, add, change or remove original capabilities.
 MOJANG - Mojang AB
