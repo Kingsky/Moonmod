@@ -1,6 +1,19 @@
-Moonmod
+The Moon mod
 =======
 
+GENERAL
+==========
+The Moon mod gives you the ability to travel to the moon
+
+HOW TO GET THERE
+=================
+To get to The Moon you have to build a portal. The portal looks same as Nether portal, but is made from cheese, because as you Moon is made from cheese, isn’t it? To activate the portal use Sonic Screwdiver. As you find out later the cheese myth isn’t really true, but every there is a little bit of truth in every tale.
+
+LIVING ON THE MOON
+==================
+On Moon there are few changes against Minecraftia. As you know, Moon doesn’t have an atmosphere. So you have to wear super-duper Moon Suit or you will suffocate in no time. Also because of absence of atmosphere you cannot place certain blocks including plants, fluids and fire operating crafts (furnaces, torches). If you want to smelt ores or use torches. No problem. Just take a piece of Minecraftia with you. It’s really easy, just craft a Moon Tent for you. Tent unites a protection and portability. You want to move on? Just pack your tent and head to adventure.
+
+The Moon has a lower gravity than Minecraftia. So you can jump higher and fall deeper at ease. But this could be a little contra productive. So if you want to jump a little use duck jump i.e.  jump while sneaking.
 
 0. USED TERMS
 MOD - modification, plugin, a piece of software that interfaces with the Minecraft client to extend, add, change or remove original capabilities.
