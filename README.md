@@ -7,7 +7,9 @@ The Moon mod gives you the ability to travel to the moon
 
 LINKS
 =======
+
 Wiki: moonmod.wikia.com
+
 Thread on minecraftforum: http://www.minecraftforum.net/topic/1604455-wipmoon-mod-now-updated-by-jlndk-146open-sourgeforge/
 
 TERMS OF AGREEMENT
