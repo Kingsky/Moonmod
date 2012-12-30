@@ -43,10 +43,10 @@ public class TeleporterMoon extends Teleporter {
                         for (int j2 = i1 - c; j2 <= i1 + c; j2++) {
                                 double d3 = ((double) j2 + 0.5D) - entity.posZ;
                                 for (int k2 = 128 - 1; k2 >= 0; k2--) {
-                                        if (world.getBlockId(j1, k2, j2) != mod_moonmod.MoonPortal.blockID) {
+                                        if (world.getBlockId(j1, k2, j2) != Moonmod.MoonPortal.blockID) {
                                                 continue;
                                         }
-                                        for (; world.getBlockId(j1, k2 - 1, j2) == mod_moonmod.MoonPortal.blockID; k2--) {
+                                        for (; world.getBlockId(j1, k2 - 1, j2) == Moonmod.MoonPortal.blockID; k2--) {
                                         }
                                         double d5 = ((double) k2 + 0.5D) - entity.posY;
                                         double d7 = d1 * d1 + d5 * d5 + d3 * d3;
@@ -67,16 +67,16 @@ public class TeleporterMoon extends Teleporter {
                         double d2 = (double) k1 + 0.5D;
                         double d4 = (double) l1 + 0.5D;
                         double d6 = (double) i2 + 0.5D;
-                        if (world.getBlockId(k1 - 1, l1, i2) == mod_moonmod.MoonPortal.blockID) {
+                        if (world.getBlockId(k1 - 1, l1, i2) == Moonmod.MoonPortal.blockID) {
                                 d2 -= 0.5D;
                         }
-                        if (world.getBlockId(k1 + 1, l1, i2) == mod_moonmod.MoonPortal.blockID) {
+                        if (world.getBlockId(k1 + 1, l1, i2) == Moonmod.MoonPortal.blockID) {
                                 d2 += 0.5D;
                         }
-                        if (world.getBlockId(k1, l1, i2 - 1) == mod_moonmod.MoonPortal.blockID) {
+                        if (world.getBlockId(k1, l1, i2 - 1) == Moonmod.MoonPortal.blockID) {
                                 d6 -= 0.5D;
                         }
-                        if (world.getBlockId(k1, l1, i2 + 1) == mod_moonmod.MoonPortal.blockID) {
+                        if (world.getBlockId(k1, l1, i2 + 1) == Moonmod.MoonPortal.blockID) {
                                 d6 += 0.5D;
                         }
                         entity.setLocationAndAngles(d2, d4, d6, entity.rotationYaw, 0.0F);
@@ -218,7 +218,7 @@ public class TeleporterMoon extends Teleporter {
                                                                 k8,
                                                                 l9,
                                                                 i11,
-                                                                flag ? mod_moonmod.CheeseBlock.blockID
+                                                                flag ? Moonmod.CheeseBlock.blockID
                                                                                 : 0);
                                         }
                                 }
@@ -237,8 +237,8 @@ public class TeleporterMoon extends Teleporter {
                                                         l8,
                                                         i10,
                                                         j11,
-                                                        flag1 ? mod_moonmod.CheeseBlock.blockID
-                                                                        : mod_moonmod.MoonPortal.blockID);
+                                                        flag1 ? Moonmod.CheeseBlock.blockID
+                                                                        : Moonmod.MoonPortal.blockID);
                                 }
                         }
  

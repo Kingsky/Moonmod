@@ -18,9 +18,9 @@ public class BlockIgniteBlock extends Block{
 	public void onBlockAdded(World par1World, int par2, int par3, int par4)
 	{
 
-	if (par1World.getBlockId(par2, par3 - 1, par4) != mod_moonmod.CheeseBlock.blockID || ! BlockMoonPortal.tryToCreatePortal(par1World, par2, par3, par4))
+	if (par1World.getBlockId(par2, par3 - 1, par4) != Moonmod.CheeseBlock.blockID || ! BlockMoonPortal.tryToCreatePortal(par1World, par2, par3, par4))
 	{
-	if (par3 - 1 != mod_moonmod.CheeseBlock.blockID)
+	if (par3 - 1 != Moonmod.CheeseBlock.blockID)
 	{
 	par1World.setBlockWithNotify(par2, par3, par4, 0);
 

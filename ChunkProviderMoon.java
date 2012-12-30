@@ -22,8 +22,8 @@ public class ChunkProviderMoon implements IChunkProvider {
 	private World worldObj;
 	private int param = 512;
 	private float f = 3;
-	private int fill = mod_moonmod.MoonStone.blockID;
-	Block top = mod_moonmod.MoonStone;
+	private int fill = Moonmod.MoonStone.blockID;
+	Block top = Moonmod.MoonStone;
 
 	/**
 	 * Block coordniates. Start of chunk.
@@ -72,7 +72,7 @@ public class ChunkProviderMoon implements IChunkProvider {
 			x = chunkStartX + this.moonRand.nextInt(16);
 			y = this.moonRand.nextInt(30);
 			z = chunkStartZ + this.moonRand.nextInt(16);
-			(new WorldGenMinable(mod_moonmod.AluOre.blockID, 4)).generate(
+			(new WorldGenMinable(Moonmod.AluOre.blockID, 4)).generate(
 					this.worldObj, this.moonRand, x, y, z);
 		}
 
@@ -80,7 +80,7 @@ public class ChunkProviderMoon implements IChunkProvider {
 			x = i + this.moonRand.nextInt(16);
 			y = this.moonRand.nextInt(128);
 			z = j + this.moonRand.nextInt(16);
-			(new WorldGenMinable(mod_moonmod.MoonStone.blockID, 32)).generate(
+			(new WorldGenMinable(Moonmod.MoonStone.blockID, 32)).generate(
 					this.worldObj, this.moonRand, x, y, z);
 		}
 	}
@@ -111,24 +111,8 @@ public class ChunkProviderMoon implements IChunkProvider {
 		computeCraters(i, j, ashort0);
 	}
 
-	/**
-	 * Kdy�� jsou ob�� sou��adnice chunku sud��, nach��z�� se na n��m st��ed. Ze
-	 * sou��adnic st��edu spo����t��m n��hodn�� ����slo <-1;1>. N��hodn�� ����slo pou��iju na
-	 * propo��et hloubky a pr��m��ru kr��teru a posun st��edu. Potom vytvo��im
-	 * kr��tery.
-	 * 
-	 * kdy�� jsou ob�� sou��. sud��. jsem na st��edu brnka��ka.
-	 * 
-	 * kdy�� je sud�� x a z lich�� po����t��m: z+1,x; z-1,x;z+1,x+2; z+2,x-1; z+1,x-2;
-	 * z-1,x-2;
-	 * 
-	 * kdy�� je sud�� z a x lich�� po����t��m: z,x+1; z,x-1;z+2,x+1; z-1,x+2; z-2,x+1;
-	 * z-2,x-1;
-	 * 
-	 * kdy�� lich�� ob�� po����t��m: z+1,x+1;z+1,x-1;z-1,x+1;z-1;x-1
-	 */
+
 	private void computeCraters(int x, int z, short[] chunkArr) {
-		// sud�� x a z
 		boolean evenX, evenZ;
 		evenX = x % 2 == 0 ? true : false;
 		evenZ = z % 2 == 0 ? true : false;

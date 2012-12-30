@@ -15,8 +15,8 @@ public class WorldGenMoon extends BiomeGenBase
         super(par1);
         this.spawnableMonsterList.clear();
         this.spawnableCreatureList.clear();
-        topBlock = (byte)mod_moonmod.MoonStone.blockID;
-        fillerBlock = (byte)mod_moonmod.MoonStone.blockID;
+        topBlock = (byte)Moonmod.MoonStone.blockID;
+        fillerBlock = (byte)Moonmod.MoonStone.blockID;
     }
 	public BiomeGenBase setDisableRain()
     {

@@ -111,7 +111,7 @@ public String getDepartMessage()
 public void registerWorldChunkManager()
 {
 
-	worldChunkMgr = new WorldChunkManagerMoon(mod_moonmod.moon, 1.0F, 0.0F);
+	worldChunkMgr = new WorldChunkManagerMoon(Moonmod.moon, 1.0F, 0.0F);
 
 }
 
@@ -142,7 +142,7 @@ public float calculateCelestialAngle(long par1, float par3)
 
 @Override
 public String getDimensionName() {
-	return mod_moonmod.getDimensionName();
+	return Moonmod.getDimensionName();
 }
 
 }

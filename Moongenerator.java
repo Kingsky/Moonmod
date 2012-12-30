@@ -29,7 +29,7 @@ public class Moongenerator implements IWorldGenerator
 	  int Ycoord = random.nextInt(128);
 	  int Zcoord = blockZ + random.nextInt(16);
 	  
-	  (new WorldGenMinable(mod_moonmod.AluOre.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);  
+	  (new WorldGenMinable(Moonmod.AluOre.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);  
   }
 
 
@@ -40,7 +40,7 @@ private void generateSurface(World world, Random random, int blockX, int blockZ)
   int Ycoord = random.nextInt(60);
   int Zcoord = blockZ + random.nextInt(16);
   
-  (new WorldGenMinable(mod_moonmod.AluOre.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
+  (new WorldGenMinable(Moonmod.AluOre.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
  }
  
  private void generateNether(World world, Random random, int blockX, int blockZ) 

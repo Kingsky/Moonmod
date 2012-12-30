@@ -12,6 +12,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemMonsterPlacer;
+import net.minecraft.src.ModLoader;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -109,12 +110,12 @@ public class BlockMoonPortal extends BlockBreakable
         byte var5 = 0;
         byte var6 = 0;
 
-        if (par1World.getBlockId(par2 - 1, par3, par4) == mod_moonmod.CheeseBlock.blockID || par1World.getBlockId(par2 + 1, par3, par4) == mod_moonmod.CheeseBlock.blockID)
+        if (par1World.getBlockId(par2 - 1, par3, par4) == Moonmod.CheeseBlock.blockID || par1World.getBlockId(par2 + 1, par3, par4) == Moonmod.CheeseBlock.blockID)
         {
             var5 = 1;
         }
 
-        if (par1World.getBlockId(par2, par3, par4 - 1) == mod_moonmod.CheeseBlock.blockID || par1World.getBlockId(par2, par3, par4 + 1) == mod_moonmod.CheeseBlock.blockID)
+        if (par1World.getBlockId(par2, par3, par4 - 1) == Moonmod.CheeseBlock.blockID || par1World.getBlockId(par2, par3, par4 + 1) == Moonmod.CheeseBlock.blockID)
         {
             var6 = 1;
         }
@@ -146,12 +147,12 @@ public class BlockMoonPortal extends BlockBreakable
 
                         if (var9)
                         {
-                            if (var10 != mod_moonmod.CheeseBlock.blockID)
+                            if (var10 != Moonmod.CheeseBlock.blockID)
                             {
                                 return false;
                             }
                         }
-                        else if (var10 != 0 && var10 != mod_moonmod.IgniteBlock.blockID)
+                        else if (var10 != 0 && var10 != Moonmod.IgniteBlock.blockID)
                         {
                             return false;
                         }
@@ -165,7 +166,7 @@ public class BlockMoonPortal extends BlockBreakable
             {
                 for (var8 = 0; var8 < 3; ++var8)
                 {
-                    par1World.setBlockWithNotify(par2 + var5 * var7, par3 + var8, par4 + var6 * var7, mod_moonmod.MoonPortal.blockID);
+                    par1World.setBlockWithNotify(par2 + var5 * var7, par3 + var8, par4 + var6 * var7, Moonmod.MoonPortal.blockID);
                 }
             }
 
@@ -196,7 +197,7 @@ public class BlockMoonPortal extends BlockBreakable
             ;
         }
 
-        if (par1World.getBlockId(par2, var8 - 1, par4) != mod_moonmod.CheeseBlock.blockID)
+        if (par1World.getBlockId(par2, var8 - 1, par4) != Moonmod.CheeseBlock.blockID)
         {
             par1World.setBlockWithNotify(par2, par3, par4, 0);
         }
@@ -209,7 +210,7 @@ public class BlockMoonPortal extends BlockBreakable
                 ;
             }
 
-            if (var9 == 3 && par1World.getBlockId(par2, var8 + var9, par4) == mod_moonmod.CheeseBlock.blockID)
+            if (var9 == 3 && par1World.getBlockId(par2, var8 + var9, par4) == Moonmod.CheeseBlock.blockID)
             {
                 boolean var10 = par1World.getBlockId(par2 - 1, par3, par4) == this.blockID || par1World.getBlockId(par2 + 1, par3, par4) == this.blockID;
                 boolean var11 = par1World.getBlockId(par2, par3, par4 - 1) == this.blockID || par1World.getBlockId(par2, par3, par4 + 1) == this.blockID;
@@ -220,7 +221,7 @@ public class BlockMoonPortal extends BlockBreakable
                 }
                 else
                 {
-                    if ((par1World.getBlockId(par2 + var6, par3, par4 + var7) != mod_moonmod.CheeseBlock.blockID || par1World.getBlockId(par2 - var6, par3, par4 - var7) != this.blockID) && (par1World.getBlockId(par2 - var6, par3, par4 - var7) != mod_moonmod.CheeseBlock.blockID || par1World.getBlockId(par2 + var6, par3, par4 + var7) != this.blockID))
+                    if ((par1World.getBlockId(par2 + var6, par3, par4 + var7) != Moonmod.CheeseBlock.blockID || par1World.getBlockId(par2 - var6, par3, par4 - var7) != this.blockID) && (par1World.getBlockId(par2 - var6, par3, par4 - var7) != Moonmod.CheeseBlock.blockID || par1World.getBlockId(par2 + var6, par3, par4 + var7) != this.blockID))
                     {
                         par1World.setBlockWithNotify(par2, par3, par4, 0);
                     }
@@ -278,10 +279,12 @@ public class BlockMoonPortal extends BlockBreakable
     EntityPlayerMP thePlayer = (EntityPlayerMP) entity;
     if (entity.dimension != -37)
     {
+    	thePlayer.timeUntilPortal = 10;
     thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 37);
     }
     else
     {
+    	thePlayer.timeUntilPortal = 10;
     thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0);
     }
     }

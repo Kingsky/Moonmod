@@ -12,7 +12,7 @@ public class ItemSonicScrew extends Item {
 	protected ItemSonicScrew(int i) {
 		super(i);
 		setMaxStackSize(1);
-		setMaxDamage(mod_moonmod.screwUses);
+		setMaxDamage(Moonmod.screwUses);
 		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 
@@ -66,7 +66,7 @@ public class ItemSonicScrew extends Item {
             if (var11 == 0)
             {
                 par3World.playSoundEffect((double)par4 + 0.5D, (double)par5 + 0.5D, (double)par6 + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-                par3World.setBlockWithNotify(par4, par5, par6, mod_moonmod.IgniteBlock.blockID);
+                par3World.setBlockWithNotify(par4, par5, par6, Moonmod.IgniteBlock.blockID);
             }
 
             par1ItemStack.damageItem(1, par2EntityPlayer);
