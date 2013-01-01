@@ -9,5 +9,9 @@ public class ItemCheeseSlice extends ItemFood {
 		maxStackSize = 4;
 	    this.setCreativeTab(Moonmod.tabMoon);
 	}
-
+	
+	public String getTextureFile(){
+        
+        return "/jlndk/moonmod/Items.png";      
+        }
 }

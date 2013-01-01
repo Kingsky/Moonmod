@@ -54,13 +54,13 @@ public class Moonmod {
 	//Item Declaring
 	public static Item AluIngot = new ItemAluIngot(550).setIconIndex(1).setItemName("AluIngot");
 	public static Item SonicScrew = new ItemSonicScrew(551).setIconIndex(2).setItemName("SonicScrew");
-	public static Item CheeseSlice = new ItemCheeseSlice (552, 8, true).setIconIndex(3).setItemName("CheeseSlice");
+	public static Item CheeseSlice = new ItemCheeseSlice (552, 8, true).setIconIndex(8).setItemName("CheeseSlice");
 
 	//Armor Declaring
-	public static Item MoonHelmet = (new ItemMoonArmor(700, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 0).setIconIndex(4).setItemName("moonHelm"));
-	public static Item MoonChest = (new ItemMoonArmor(701, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 1).setIconIndex(5).setItemName("moonChest"));
-	public static Item MoonPants = (new ItemMoonArmor(702, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 2).setIconIndex(6).setItemName("moonPants"));
-	public static Item MoonBoots = (new ItemMoonArmor(703, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 3).setIconIndex(7).setItemName("moonBoots"));
+	public static Item MoonHelmet = (new ItemMoonArmor(700, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 0).setIconIndex(3).setItemName("moonHelm"));
+	public static Item MoonChest = (new ItemMoonArmor(701, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 1).setIconIndex(4).setItemName("moonChest"));
+	public static Item MoonPants = (new ItemMoonArmor(702, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 2).setIconIndex(5).setItemName("moonPants"));
+	public static Item MoonBoots = (new ItemMoonArmor(703, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 3).setIconIndex(6).setItemName("moonBoots"));
 
 	@SidedProxy(clientSide = "net.jlndk.moonmod.ClientProxyTutorial", serverSide = "net.jlndk.moonmod.CommonProxyTutorial")
     public static CommonProxyTutorial proxy;
@@ -99,7 +99,6 @@ public class Moonmod {
 	//Generators
 		GameRegistry.registerWorldGenerator(new Moongenerator());
 	//Adding ItemName 
-		//English
 			//blocks
 			LanguageRegistry.addName(CheeseBlock, "Block of Cheese");
 			LanguageRegistry.addName(AluBlock, "Aluminium Block");
@@ -117,7 +116,7 @@ public class Moonmod {
 			LanguageRegistry.addName(MoonChest, "Moon Chestplate");
 			LanguageRegistry.addName(MoonPants, "Moon Leggings");
 			LanguageRegistry.addName(MoonBoots, "Moon Boots");
-			LanguageRegistry.addName(MoonBoots, "Cheese Slice");
+			LanguageRegistry.addName(CheeseSlice, "Cheese Slice");
 		
 	//Recipes
 		//crafting
