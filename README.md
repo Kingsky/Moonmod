@@ -1,5 +1,6 @@
-The Moon mod
+The Moon mod 
 =======
+now updated to 0.0.4
 
 GENERAL
 ==========
