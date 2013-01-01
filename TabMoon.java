@@ -11,7 +11,7 @@ super(position, tabID); //The constructor for your tab
 @SideOnly(Side.CLIENT)
 public int getTabIconItemIndex() //The item it displays for your tab
 {
-return Moonmod.MoonStone.blockIndexInTexture; //For this we'll use the ruby
+return Moonmod.SonicScrew.shiftedIndex; //For this we'll use the ruby
 }
 public String getTranslatedTabLabel()
 {

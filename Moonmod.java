@@ -48,8 +48,8 @@ public class Moonmod {
     public static final Block IgniteBlock = new BlockIgniteBlock(460, 0).setBlockName("IgniteBlock").setHardness(1F).setResistance(5F);
     public static Block ReinfCloth = new BlockReinforgedCloth(461, 4).setBlockName("ReinfCloth").setHardness(1F).setResistance(2F);
     public static Block MoonTent = new BlockMoonTent(462, 7).setBlockName("MoonTent").setHardness(1F).setResistance(10F);
-    public static final Block MoonLampIdle = (new BlockMoonLamp(463, false, 8)).setHardness(0.3F).setStepSound(Block.soundStoneFootstep).setBlockName("MoonLampIdle");
-    public static final Block MoonLampActive = (new BlockMoonLamp(464, true, 9)).setHardness(0.3F).setStepSound(Block.soundStoneFootstep).setBlockName("MoonLampActive").setCreativeTab(Moonmod.tabMoon).setLightValue(1.0F);
+    public static final Block MoonLampIdle = (new BlockMoonLamp(463, false, 5)).setHardness(0.3F).setStepSound(Block.soundMetalFootstep).setBlockName("MoonLampIdle");
+    public static final Block MoonLampActive = (new BlockMoonLamp(464, true, 5)).setHardness(0.3F).setStepSound(Block.soundMetalFootstep).setBlockName("MoonLampActive").setCreativeTab(Moonmod.tabMoon).setLightValue(1.0F);
     
 	//Item Declaring
 	public static Item AluIngot = new ItemAluIngot(550).setIconIndex(1).setItemName("AluIngot");

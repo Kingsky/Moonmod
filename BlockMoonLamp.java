@@ -16,21 +16,6 @@ public class BlockMoonLamp extends Block
                 powered = par1;
         }
 
-        public void onBlockAdded(World par1World, int par2, int par3, int par4)
-        {
-                if (!par1World.isRemote)
-                {
-                        if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
-                        {
-                                par1World.scheduleBlockUpdate(par2, par3, par4, blockID, 4);
-                        }
-                        else if (!powered && par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
-                        {
-                                par1World.setBlockWithNotify(par2, par3, par4, Moonmod.MoonLampActive.blockID);
-                        }
-                }
-        }
-
         public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
         {
                 if (!par1World.isRemote)
@@ -61,7 +46,7 @@ public class BlockMoonLamp extends Block
         }
         public int idDropped (int i,Random random, int j)
         {
-                return Moonmod.MoonLampIdle.blockID;
+                return Moonmod.MoonLampActive.blockID;
         }
         public String getTextureFile(){
     		return "/jlndk/moonmod/Blocks.png";
