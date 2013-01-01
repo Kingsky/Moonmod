@@ -7,6 +7,7 @@ import java.util.Random;
 
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,14 +28,16 @@ import net.minecraftforge.common.DimensionManager;
 /*
  * Basic needed forge stuff
  */
-@Mod(modid="Moonmod",name="Moonmod by Jlndk",version="0.0.3 for 1.4.5")
+@Mod(modid="Moonmod",name="Moonmod by Jlndk",version="0.0.4 for 1.4.5")
 @NetworkMod(clientSideRequired=true,serverSideRequired=false)
 public class Moonmod {
 	public static int screwUses = 30;
 	{
 		MinecraftForgeClient.preloadTexture("/jlndk/moonmod/Blocks.png");
 	}
-
+		//Creative tab Declaring
+	public static CreativeTabs tabMoon = new TabMoon(CreativeTabs.getNextID(),"Moon");
+	
 		//Block Declaring
 	public static Block CheeseBlock = new BlockCheese(425, 1).setBlockName("CheeseBlock").setHardness(1F).setResistance(5F);;
 	public static Block AluBlock = new BlockAluBlock(456, 2).setBlockName("AluBlock").setHardness(1F).setResistance(5F);
@@ -45,6 +48,8 @@ public class Moonmod {
     public static final Block IgniteBlock = new BlockIgniteBlock(460, 0).setBlockName("IgniteBlock").setHardness(1F).setResistance(5F);
     public static Block ReinfCloth = new BlockReinforgedCloth(461, 4).setBlockName("ReinfCloth").setHardness(1F).setResistance(2F);
     public static Block MoonTent = new BlockMoonTent(462, 7).setBlockName("MoonTent").setHardness(1F).setResistance(10F);
+    public static final Block MoonLampIdle = (new BlockMoonLamp(463, false, 8)).setHardness(0.3F).setStepSound(Block.soundStoneFootstep).setBlockName("MoonLampIdle");
+    public static final Block MoonLampActive = (new BlockMoonLamp(464, true, 9)).setHardness(0.3F).setStepSound(Block.soundStoneFootstep).setBlockName("MoonLampActive").setCreativeTab(Moonmod.tabMoon).setLightValue(1.0F);
     
 	//Item Declaring
 	public static Item AluIngot = new ItemAluIngot(550).setIconIndex(1).setItemName("AluIngot");
@@ -88,6 +93,8 @@ public class Moonmod {
 		GameRegistry.registerBlock(IgniteBlock);
 		GameRegistry.registerBlock(ReinfCloth);
 		GameRegistry.registerBlock(MoonTent);
+		GameRegistry.registerBlock(MoonLampActive);
+		GameRegistry.registerBlock(MoonLampIdle);
 
 	//Generators
 		GameRegistry.registerWorldGenerator(new Moongenerator());
@@ -111,24 +118,7 @@ public class Moonmod {
 			LanguageRegistry.addName(MoonPants, "Moon Leggings");
 			LanguageRegistry.addName(MoonBoots, "Moon Boots");
 			LanguageRegistry.addName(MoonBoots, "Cheese Slice");
-		//Danish
-			//Blocks
-			LanguageRegistry.instance().addStringLocalization("tile.CheeseBlock.name", "da_DK", "Oste Blok");
-			LanguageRegistry.instance().addStringLocalization("tile.AluBlock.name", "da_DK", "Alumenium Blok");
-			LanguageRegistry.instance().addStringLocalization("tile.AluOre.name", "da_DK", "Alumenium Malm");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonStone.name", "da_DK", "M����ne Sten");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonCobblestone.name", "da_DK", "M����ne Brosten");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonPortal.name", "da_DK", "M����ne Portal Block");
-			LanguageRegistry.instance().addStringLocalization("tile.ReinfCloth.name", "da_DK", "Forst����rket Stof");
-			LanguageRegistry.instance().addStringLocalization("tile.MoonTent.name", "da_DK", "M����ne Telt");
-			//Items
-			LanguageRegistry.instance().addStringLocalization(SonicScrew.getItemName() + ".name", "da_DK", "Sonisk Skruetr����kker");
-			LanguageRegistry.instance().addStringLocalization(AluIngot.getItemName() + ".name", "da_DK", "Alumenium Barre");
-			LanguageRegistry.instance().addStringLocalization(MoonHelmet.getItemName() + ".name", "da_DK", "M����ne Hjelm");
-			LanguageRegistry.instance().addStringLocalization(MoonChest.getItemName() + ".name", "da_DK", "M����ne Jakke");
-			LanguageRegistry.instance().addStringLocalization(MoonPants.getItemName() + ".name", "da_DK", "M����ne Bukser");
-			LanguageRegistry.instance().addStringLocalization(MoonBoots.getItemName() + ".name", "da_DK", "M����ne St����vler");
-			LanguageRegistry.instance().addStringLocalization(CheeseSlice.getItemName() + ".name", "da_DK", "Oste Stykke");
+		
 	//Recipes
 		//crafting
 		GameRegistry.addRecipe(new ItemStack(Moonmod.CheeseBlock, 2), new Object[] {"###", "###", "###", '#', Item.bucketMilk});

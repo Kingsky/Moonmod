@@ -1,6 +1,5 @@
 package net.jlndk.moonmod;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
  
 public class ItemAluIngot extends Item
@@ -9,7 +8,7 @@ public class ItemAluIngot extends Item
     {
         super(i);
         maxStackSize = 64;
-        this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setCreativeTab(Moonmod.tabMoon);
     }
  
  

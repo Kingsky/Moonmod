@@ -2,7 +2,6 @@ package net.jlndk.moonmod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
 
 public class BlockIgniteBlock extends Block{

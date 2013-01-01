@@ -8,7 +8,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemMonsterPlacer;
@@ -23,7 +22,6 @@ public class BlockMoonPortal extends BlockBreakable
     {
         super(par1, par2, Material.portal, false);
         this.setTickRandomly(true);
-        this.setCreativeTab(CreativeTabs.tabBlock);
     }
 
     /**

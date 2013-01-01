@@ -1,7 +1,6 @@
 package net.jlndk.moonmod;
 
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,7 +12,7 @@ public class ItemSonicScrew extends Item {
 		super(i);
 		setMaxStackSize(1);
 		setMaxDamage(Moonmod.screwUses);
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(Moonmod.tabMoon);
 	}
 
 	public boolean canHarvestBlock(Block block) {
