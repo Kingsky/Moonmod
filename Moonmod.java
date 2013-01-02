@@ -62,8 +62,8 @@ public class Moonmod {
 	public static Item MoonPants = (new ItemMoonArmor(702, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 2).setIconIndex(5).setItemName("moonPants"));
 	public static Item MoonBoots = (new ItemMoonArmor(703, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 3).setIconIndex(6).setItemName("moonBoots"));
 
-	@SidedProxy(clientSide = "net.jlndk.moonmod.ClientProxyTutorial", serverSide = "net.jlndk.moonmod.CommonProxyTutorial")
-    public static CommonProxyTutorial proxy;
+	@SidedProxy(clientSide = "net.jlndk.moonmod.ClientProxyMoon", serverSide = "net.jlndk.moonmod.CommonProxyMoon")
+    public static CommonProxyMoon proxy;
 
 
 
