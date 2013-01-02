@@ -55,6 +55,7 @@ public class Moonmod {
 	public static Item AluIngot = new ItemAluIngot(550).setIconIndex(1).setItemName("AluIngot");
 	public static Item SonicScrew = new ItemSonicScrew(551).setIconIndex(2).setItemName("SonicScrew");
 	public static Item CheeseSlice = new ItemCheeseSlice (552, 8, true).setIconIndex(8).setItemName("CheeseSlice");
+	public static Item Battery = new ItemBattery(553).setIconIndex(1).setItemName("Battery");
 
 	//Armor Declaring
 	public static Item MoonHelmet = (new ItemMoonArmor(700, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 0).setIconIndex(3).setItemName("moonHelm"));
@@ -69,10 +70,7 @@ public class Moonmod {
 
 	//Biome Declaring
 	public static BiomeGenBase moon = new BiomeGenMoon(14).setBiomeName("Moon").setDisableRain().setTemperatureRainfall(2.0F, 0.0F);
-
-	//tent
-
-
+	
 
 	//Declaring Init
 	@Init
@@ -83,7 +81,8 @@ public class Moonmod {
 			DimensionManager.registerDimension(37, 37);
 		  }	
 
-	//Registering Block
+	//Registering 
+	 //Block
 		GameRegistry.registerBlock(CheeseBlock);
 		GameRegistry.registerBlock(AluBlock);
 		GameRegistry.registerBlock(AluOre);
@@ -98,8 +97,11 @@ public class Moonmod {
 
 	//Generators
 		GameRegistry.registerWorldGenerator(new Moongenerator());
+	
+	//Fuel handler
+		GameRegistry.registerFuelHandler(new MoonFuelHandler());
 	//Adding ItemName 
-			//blocks
+		//blocks
 			LanguageRegistry.addName(CheeseBlock, "Block of Cheese");
 			LanguageRegistry.addName(AluBlock, "Aluminium Block");
 			LanguageRegistry.addName(AluOre, "Aluminium Ore");
@@ -110,13 +112,15 @@ public class Moonmod {
 			LanguageRegistry.addName(IgniteBlock, "Ignition Block");
 			LanguageRegistry.addName(ReinfCloth, "Reinforged Cloth");
 			LanguageRegistry.addName(MoonTent, "Moon Tent");
-			//Items
+			LanguageRegistry.addName(MoonLampActive, "Moon Lamp");
+		//Items
 			LanguageRegistry.addName(SonicScrew, "Sonic Screwdriver");
 			LanguageRegistry.addName(MoonHelmet, "Moon Helmet");
 			LanguageRegistry.addName(MoonChest, "Moon Chestplate");
 			LanguageRegistry.addName(MoonPants, "Moon Leggings");
 			LanguageRegistry.addName(MoonBoots, "Moon Boots");
 			LanguageRegistry.addName(CheeseSlice, "Cheese Slice");
+			LanguageRegistry.addName(Battery, "Battery");
 		
 	//Recipes
 		//crafting
