@@ -1,5 +1,7 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.mobs;
 
+import net.jlndk.Moonmod.Moonmod;
+import net.jlndk.Moonmod.blocks.BlockMoonTent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.item.ItemStack;

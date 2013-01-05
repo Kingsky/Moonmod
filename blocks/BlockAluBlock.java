@@ -1,5 +1,8 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.blocks;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -10,6 +13,7 @@ public class BlockAluBlock extends Block{
 		this.setCreativeTab(Moonmod.tabMoon);
 			
 	}
+	@SideOnly(Side.CLIENT)
 	public String getTextureFile(){
 		return "/jlndk/moonmod/Blocks.png";
 	}

@@ -1,7 +1,8 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.world;
 
 import java.util.Random;
 
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;

@@ -1,11 +1,12 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.blocks;
 
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockMoonCobblestone extends Block{
-	public BlockMoonCobblestone(int par1, int par2){
-		super(par1, par2, Material.rock);
+public class BlockCheese extends Block{
+	public BlockCheese(int par1, int par2){
+		super(par1, par2, Material.ground);
 		this.setCreativeTab(Moonmod.tabMoon);
 			
 	}

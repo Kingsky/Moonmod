@@ -1,4 +1,4 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;

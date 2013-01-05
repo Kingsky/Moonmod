@@ -1,5 +1,6 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.items;
 
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.item.Item;
  
 public class ItemBattery extends Item

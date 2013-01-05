@@ -1,7 +1,8 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.blocks;
 
 import java.util.Random;
 
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.World;

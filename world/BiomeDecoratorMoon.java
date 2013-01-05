@@ -1,4 +1,4 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.world;
 
 import java.util.Random;
 

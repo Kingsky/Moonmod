@@ -1,4 +1,4 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod;
 
 /*
  * Importing
@@ -6,6 +6,23 @@ package net.jlndk.moonmod;
 import java.util.Random;
 
 
+import net.jlndk.Moonmod.blocks.BlockAluBlock;
+import net.jlndk.Moonmod.blocks.BlockCheese;
+import net.jlndk.Moonmod.blocks.BlockIgniteBlock;
+import net.jlndk.Moonmod.blocks.BlockMoonCobblestone;
+import net.jlndk.Moonmod.blocks.BlockMoonLamp;
+import net.jlndk.Moonmod.blocks.BlockMoonPortal;
+import net.jlndk.Moonmod.blocks.BlockMoonStone;
+import net.jlndk.Moonmod.blocks.BlockMoonTent;
+import net.jlndk.Moonmod.blocks.BlockReinforgedCloth;
+import net.jlndk.Moonmod.items.ItemAluIngot;
+import net.jlndk.Moonmod.items.ItemBattery;
+import net.jlndk.Moonmod.items.ItemCheeseSlice;
+import net.jlndk.Moonmod.items.ItemMoonArmor;
+import net.jlndk.Moonmod.items.ItemSonicScrew;
+import net.jlndk.Moonmod.world.BiomeGenMoon;
+import net.jlndk.Moonmod.world.Moongenerator;
+import net.jlndk.Moonmod.world.WorldProviderMoon;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
@@ -21,6 +38,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.DimensionManager;
 
@@ -29,11 +47,11 @@ import net.minecraftforge.common.DimensionManager;
  * Basic needed forge stuff
  */
 @Mod(modid="Moonmod",name="Moonmod by Jlndk",version="0.0.4 for 1.4.5")
-@NetworkMod(clientSideRequired=true,serverSideRequired=false)
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Moonmod {
 	public static int screwUses = 30;
 	{
-		MinecraftForgeClient.preloadTexture("/jlndk/moonmod/Blocks.png");
+	
 	}
 		//Creative tab Declaring
 	public static CreativeTabs tabMoon = new TabMoon(CreativeTabs.getNextID(),"Moon");
@@ -63,7 +81,7 @@ public class Moonmod {
 	public static Item MoonPants = (new ItemMoonArmor(702, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 2).setIconIndex(5).setItemName("moonPants"));
 	public static Item MoonBoots = (new ItemMoonArmor(703, EnumArmorMaterial.IRON, ModLoader.addArmor("moonSuit"), 3).setIconIndex(6).setItemName("moonBoots"));
 
-	@SidedProxy(clientSide = "net.jlndk.moonmod.ClientProxyMoon", serverSide = "net.jlndk.moonmod.CommonProxyMoon")
+	@SidedProxy(clientSide = "net.jlndk.Moonmod.ClientProxyMoon", serverSide = "net.jlndk.Moonmod.CommonProxyMoon")
     public static CommonProxyMoon proxy;
 
 
@@ -79,8 +97,9 @@ public class Moonmod {
 			//Dimension
 			DimensionManager.registerProviderType(37, WorldProviderMoon.class, true);
 			DimensionManager.registerDimension(37, 37);
+			//Proxy
+			  proxy.init();
 		  }	
-
 	//Registering 
 	 //Block
 		GameRegistry.registerBlock(CheeseBlock);
@@ -140,8 +159,6 @@ public class Moonmod {
 		//smelting
 		GameRegistry.addSmelting(Moonmod.AluOre.blockID, new ItemStack(Moonmod.AluIngot), 0.8F);
 		GameRegistry.addSmelting(Moonmod.MoonCobblestone.blockID, new ItemStack(Moonmod.MoonStone), 0.8F);
-		//other
-		GameRegistry.addBiome(moon);
 	}
 
 		public static String getDimensionName() {

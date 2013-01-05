@@ -1,5 +1,6 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.mobs;
 
+import net.jlndk.Moonmod.world.TeleporterMoon;
 import net.minecraft.util.ChunkCoordinates;
 
 public class PortalPositionMoon extends ChunkCoordinates

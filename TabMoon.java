@@ -1,4 +1,4 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod;
 
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.relauncher.*;

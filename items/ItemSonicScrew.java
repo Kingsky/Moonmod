@@ -1,5 +1,6 @@
-package net.jlndk.moonmod;
+package net.jlndk.Moonmod.items;
 
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -8,7 +9,7 @@ import net.minecraft.world.World;
 
 public class ItemSonicScrew extends Item {
 
-	protected ItemSonicScrew(int i) {
+	public ItemSonicScrew(int i) {
 		super(i);
 		setMaxStackSize(1);
 		setMaxDamage(Moonmod.screwUses);
