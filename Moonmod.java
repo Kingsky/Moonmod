@@ -48,7 +48,7 @@ import net.minecraftforge.common.DimensionManager;
 /*
  * Basic needed forge stuff
  */
-@Mod(modid="Moonmod",name="Moonmod by Jlndk",version="0.0.4 for 1.4.5")
+@Mod(modid="Moonmod",name="Moonmod by Jlndk",version="0.0.4.1 for 1.4.7")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Moonmod {
 	public static int screwUses = 30;
@@ -94,7 +94,8 @@ public class Moonmod {
 
 	@PreInit
 	public void preload (FMLPreInitializationEvent event){
-		
+		MinecraftForgeClient.preloadTexture("/jlndk/moonmod/Blocks.png");
+		MinecraftForgeClient.preloadTexture("/jlndk/moonmod/Items.png");
 	}
 	//Declaring Init
 	@Init
