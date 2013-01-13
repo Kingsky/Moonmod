@@ -119,7 +119,27 @@ This is the most important tool for Moon explorer. It has 30 uses before it turn
 <img src="http://jonasln.dk/images/wiki/sonicscrew.png" alt="sonic_screw">
 </span>
 
+<h2> how to join the project</h2>
+<a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; 
+Register on Github
+To do anything useful I first needed to sign up for an account. Github has a range of accounts but I found that with one of their free accounts I would be able to get started and contribute to the project. This gives me a project space of my own and a user to tie all my activities to.
 
+Set up SSH Key
+In order to authenticate against the github servers, you need to set up an ssh key and give them your public key so they know you are you. You'll then need to tell git to use this key whenever it makes contact with the github servers. I do quite a bit with ssh and ssh keys myself so I was comfortable with this step. Even if you are totally new, its still pretty straightforward and they have a great howto on github itself which will help.
+
+I had issues with git not picking up that it needed to use a non-standard ssh key, but I found the answers in this entry on the git website. In a nutshell, set up an ssh alias, set the key in there and then use the alias instead of the actual URL when giving the repo location to git. This now works like a charm for me.
+
+Fork the Project
+Now, github uses "fork" where I might choose to say "checkout" - fork in my world means something else completely. But in this case you're just making your own copy of the project repository. This is where you will commit your changes to and it retains its link with the original repository making it easy for anyone with commit access to that to pull in your changes. Patch files are nowhere to be seen, and although I was wary at first, this is project collaboration at its most painless, I'm impressed! Forking was relatively simple and again there was great documentation on the github site. In particular I recommend that you take the time to follow the bit about adding an alias for the "upstream" repository - this made committing my changes to the main joind.in repo really easy.
+
+The forking instructions linked above also gave a description of how to actually use git, how to get my changes applied to my local repo, and how to push them to my remote repo on github itself.
+
+Make a Pull Request
+Once I'd fixed a few things, I was ready to push the code back to the main project so that Chris could consider it for inclusion. This is done by making a pull request from the main project page - you can add a comment about the changes you are supplying to help the maintainers to manage all the incoming patches.
+
+Go Forth and Contribute
+It was easier than I expected to get set up to contribute to a project using github, so find something you want to improve and/or be involved with, and do it. I began by fixing the docs for joind.in, which was a great place to start since it allowed me to make a useful contribution without touching the code in the first instance :)
+</span>
 <h2>Installation Instructions:</h2>
 <p>
 1. Download the latest version of forge from: Here
