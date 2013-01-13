@@ -20,6 +20,7 @@ import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAITargetNonTamed;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
@@ -32,7 +33,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityAlien extends EntityAnimal
+public class EntityAlien extends EntityMob
 {
 
     public EntityAlien(World par1World)
@@ -72,11 +73,4 @@ public class EntityAlien extends EntityAnimal
     {
         return EnumCreatureAttribute.UNDEFINED;
     }
-
-@Override
-public EntityAgeable func_90011_a(EntityAgeable var1) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
 }

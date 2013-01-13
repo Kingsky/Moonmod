@@ -7,7 +7,7 @@ public class MoonFuelHandler implements IFuelHandler {
 
 	@Override
 	public int getBurnTime(ItemStack fuel) {
-		if(fuel.itemID==Moonmod.Battery.shiftedIndex){
+		if(fuel.itemID==Moonmod.Battery.itemID){
 			return 3200;
 		}else
 		return 0;

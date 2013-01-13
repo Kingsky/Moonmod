@@ -131,10 +131,10 @@ public class EntityPlayerMoon extends EntityPlayerSP {
 		ItemStack chest = inventory.armorInventory[2];
 		ItemStack helm = inventory.armorInventory[3];
 		if (!(boots == null || legs == null || chest == null || helm == null)) {
-			if (boots.itemID == Moonmod.MoonBoots.shiftedIndex
-					&& legs.itemID == Moonmod.MoonPants.shiftedIndex
-					&& chest.itemID == Moonmod.MoonChest.shiftedIndex
-					&& helm.itemID == Moonmod.MoonHelmet.shiftedIndex) {
+			if (boots.itemID == Moonmod.MoonBoots.itemID
+					&& legs.itemID == Moonmod.MoonPants.itemID
+					&& chest.itemID == Moonmod.MoonChest.itemID
+					&& helm.itemID == Moonmod.MoonHelmet.itemID) {
 				moonAir = maxAir;
 			}
 		}
