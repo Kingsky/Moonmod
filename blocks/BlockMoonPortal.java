@@ -151,7 +151,7 @@ public class BlockMoonPortal extends BlockBreakable
                                 return false;
                             }
                         }
-                        else if (var10 != 0 && var10 != Moonmod.IgniteBlock.blockID)
+                        else if (var10 != 0 && var10 != Moonmod.MoonStone.blockID)
                         {
                             return false;
                         }
@@ -285,13 +285,10 @@ public class BlockMoonPortal extends BlockBreakable
     {
     	thePlayer.timeUntilPortal = 10;
     thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0);
-    }
-    }
-    }
-
-
-
-    }
+   }
+  }
+ }
+ }
 
     @SideOnly(Side.CLIENT)
 

@@ -8,7 +8,6 @@ import java.util.Random;
 
 import net.jlndk.Moonmod.blocks.BlockAluBlock;
 import net.jlndk.Moonmod.blocks.BlockCheese;
-import net.jlndk.Moonmod.blocks.BlockIgniteBlock;
 import net.jlndk.Moonmod.blocks.BlockMoonCobblestone;
 import net.jlndk.Moonmod.blocks.BlockMoonLamp;
 import net.jlndk.Moonmod.blocks.BlockMoonPortal;
@@ -62,10 +61,9 @@ public class Moonmod {
 	public static Block CheeseBlock = new BlockCheese(425, 1).setBlockName("CheeseBlock").setHardness(1F).setResistance(5F);;
 	public static Block AluBlock = new BlockAluBlock(456, 2).setBlockName("AluBlock").setHardness(1F).setResistance(5F);
 	public static Block AluOre = new BlockAluBlock(457, 3).setBlockName("AluOre").setHardness(1F).setResistance(5F);
-	public static Block MoonPortal = new BlockMoonPortal(458, 14).setStepSound(Block.soundGlassFootstep).setHardness(0.5F).setResistance(1F).setBlockName("MoonPortal");
+	public static Block MoonPortal = new BlockMoonPortal(458, 205).setStepSound(Block.soundGlassFootstep).setHardness(0.5F).setResistance(1F).setBlockName("MoonPortal");
     public static Block MoonStone = new BlockMoonStone(146, 6).setBlockName("MoonStone").setHardness(1F).setResistance(5F);
     public static Block MoonCobblestone = new BlockMoonCobblestone(147, 6).setBlockName("MoonCobblestone").setHardness(1F).setResistance(5F);
-    public static Block IgniteBlock = new BlockIgniteBlock(460, 0).setBlockName("IgniteBlock").setHardness(1F).setResistance(5F);
     public static Block ReinfCloth = new BlockReinforgedCloth(461, 4).setBlockName("ReinfCloth").setHardness(1F).setResistance(2F);
     public static Block MoonTent = new BlockMoonTent(462, 7).setBlockName("MoonTent").setHardness(1F).setResistance(10F);
     public static Block MoonLampIdle = (new BlockMoonLamp(463, false, 5)).setHardness(0.3F).setStepSound(Block.soundMetalFootstep).setBlockName("MoonLampIdle");
@@ -115,7 +113,6 @@ public class Moonmod {
 		GameRegistry.registerBlock(MoonPortal);
 		GameRegistry.registerBlock(MoonStone);
 		GameRegistry.registerBlock(MoonCobblestone);
-		GameRegistry.registerBlock(IgniteBlock);
 		GameRegistry.registerBlock(ReinfCloth);
 		GameRegistry.registerBlock(MoonTent);
 		GameRegistry.registerBlock(MoonLampActive);
@@ -135,7 +132,6 @@ public class Moonmod {
 			LanguageRegistry.addName(MoonStone, "Moon Stone");
 			LanguageRegistry.addName(MoonCobblestone, "Moon Cobblestone");
 			LanguageRegistry.addName(MoonPortal, "Moon Portal Block");
-			LanguageRegistry.addName(IgniteBlock, "Ignition Block");
 			LanguageRegistry.addName(ReinfCloth, "Reinforged Cloth");
 			LanguageRegistry.addName(MoonTent, "Moon Tent");
 			LanguageRegistry.addName(MoonLampActive, "Moon Lamp");
