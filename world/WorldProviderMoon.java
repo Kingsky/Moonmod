@@ -112,7 +112,7 @@ public String getDepartMessage()
 public void registerWorldChunkManager()
 {
 
-	worldChunkMgr = new WorldChunkManagerMoon(Moonmod.moon, 1.0F, 0.0F);
+	worldChunkMgr = new WorldChunkManagerMoon(Moonmod.biomemoon, 1.0F, 0.0F);
 
 }
 

@@ -1,5 +1,6 @@
-package net.jlndk.Moonmod;
+package net.jlndk.Moonmod.world;
 
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.IFuelHandler;
 

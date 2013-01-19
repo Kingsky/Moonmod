@@ -13,10 +13,12 @@ public class ItemSonicScrew extends Item {
 	public ItemSonicScrew(int i) {
 		super(i);
 		setMaxStackSize(1);
-		setMaxDamage(Moonmod.screwUses);
+		setMaxDamage(this.screwUses);
 		this.setCreativeTab(Moonmod.tabMoon);
 	}
 
+	public static int screwUses = 30;
+	
 	public boolean canHarvestBlock(Block block) {
 		return false;
 	}
