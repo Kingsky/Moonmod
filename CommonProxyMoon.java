@@ -8,6 +8,8 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class CommonProxyMoon
 {
-    public void registerRenderInformation() {}
+    public void registerRenderInformation() {
+    	
+    }
     public int addArmor(String armor) { return 0; }
 }
