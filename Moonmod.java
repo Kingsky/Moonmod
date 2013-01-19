@@ -182,7 +182,7 @@ public class Moonmod
     {
     	AluIngot = new ItemAluIngot(idAluIngot).setIconIndex(1).setItemName("AluIngot");
     	SonicScrew = new ItemSonicScrew(idSonicScrew).setIconIndex(2).setItemName("SonicScrew");
-    	CheeseSlice = new ItemCheeseSlice (idCheeseSlice, 8, true).setIconIndex(8).setItemName("CheeseSlice");
+    	CheeseSlice = new ItemCheeseSlice (idCheeseSlice, 8, true).setIconIndex(7).setItemName("CheeseSlice");
     	Battery = new ItemBattery(idBattery).setIconIndex(1).setItemName("Battery");
     	
     	//Names
