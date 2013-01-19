@@ -8,10 +8,12 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.jlndk.Moonmod.blocks.*;
 import net.jlndk.Moonmod.items.*;
+import net.jlndk.Moonmod.mobs.EntityAlien;
 import net.jlndk.Moonmod.world.BiomeGenMoon;
 import net.jlndk.Moonmod.world.MoonFuelHandler;
 import net.jlndk.Moonmod.world.Moongenerator;
@@ -135,6 +137,8 @@ public class Moonmod
         registerArmor();
         registerRecipes();
         registerDimension();
+        registerMobs();
+        
     }
 
     private void registerBlocks()
@@ -238,6 +242,11 @@ public class Moonmod
 	
 		//Fuel handler
 		GameRegistry.registerFuelHandler(new MoonFuelHandler());
+    }
+    
+    private void registerMobs()
+    {
+    	EntityRegistry.registerGlobalEntityID(EntityAlien.class, "Alien", EntityRegistry.findGlobalUniqueEntityId(), 124679, 126458);
     }
     
     public static String getDimensionName() {
