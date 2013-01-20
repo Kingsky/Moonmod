@@ -28,12 +28,8 @@ import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.EnumHelper;
 
-@Mod(modid = "Moon", name = "Moon", version = "1.3.2")
-@NetworkMod(
-                versionBounds = "[1.3]",
-                clientSideRequired = true,
-                serverSideRequired = false
-                )
+@Mod(modid = "Moon", name = "Moon", version = "0.0.5")
+@NetworkMod(versionBounds = "[0.0.5]", clientSideRequired = true, serverSideRequired = false)
 
 public class Moonmod
 {
