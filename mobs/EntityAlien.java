@@ -2,6 +2,7 @@ package net.jlndk.Moonmod.mobs;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.jlndk.Moonmod.Moonmod;
 import net.minecraft.block.BlockCloth;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
@@ -59,6 +60,9 @@ public class EntityAlien extends EntityMob
      return 4;
     }
 
+    /**
+     * Returns true if the newer Entity AI code should be run
+     */
   protected boolean isAIEnabled()
     {
         return true;
@@ -67,6 +71,14 @@ public class EntityAlien extends EntityMob
   public int getMaxHealth() 
   {
 	  	return 20;
+  }
+  
+  /**
+   * Returns the item ID for the item the mob drops on death.
+   */
+  protected int getDropItemId()
+  {
+      return Moonmod.CheeseSlice.itemID;
   }
  
   public EnumCreatureAttribute getCreatureAttribute()
