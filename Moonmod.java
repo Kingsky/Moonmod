@@ -182,6 +182,7 @@ public class Moonmod
     	Battery = new ItemBattery(idBattery).setIconIndex(1).setItemName("Battery");
     	
     	//Names
+    	LanguageRegistry.addName(AluIngot, "Alumenium Ingot");
     	LanguageRegistry.addName(SonicScrew, "Sonic Screwdriver");
 		LanguageRegistry.addName(CheeseSlice, "Cheese Slice");
 		LanguageRegistry.addName(Battery, "Battery");
