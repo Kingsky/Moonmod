@@ -4,7 +4,7 @@ now updated to 0.0.5
 
 GENERAL
 ==========
-The Moon mod gives you the ability to travel to the moon
+The Moon mod gives you the ability to travel to the moon in Minecraft
 
 LINKS
 =======
